@@ -16,7 +16,7 @@ defmodule NucleotideCount do
   @spec count([char], char) :: non_neg_integer
   def count(strand, nucleotide) do
     # converts array of characters to string
-    strandString = "#{strand}"
+    strandString = List.to_string(strand)
 
     case nucleotide do
       ?A ->
